@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- data %>
+    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>    
+
+    <form action='/toggle' method='get' target="dummyframe">
+      <input type='submit' value='Toggle' />
+    </form>
+    
+    <form action='/prev' method='get'>
+      <input type='submit' value='Prev' />
+    </form>   
+    
+    <form action='/next' method='get'>
+      <input type='submit' value='Next' />
+    </form>      
+  </body>
+</html>
