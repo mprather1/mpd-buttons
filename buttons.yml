@@ -1,0 +1,7 @@
+apps:
+  - script: ./index.js
+    name: 'buttons'
+    watch: true
+    env:
+      TZ: 'America/Chicago'
+      PORT: 8001

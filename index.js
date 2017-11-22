@@ -3,6 +3,7 @@ const http = require('http')
 const execa = require('execa')
 const path = require('path')
 
+const port = process.env['PORT']
 const app = express()
 const server = http.Server(app)
 const router = express.Router()
@@ -53,11 +54,10 @@ router.route('/')
 .get((req, res, next) => {
   execa.shell('mpc')
   .then(result => {
-    console.log(result)
     res.render('index', {
       data: result.stdout.split('[')[0]
     })
   })
 })
 
-server.listen(8000)
+server.listen(port)
